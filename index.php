@@ -1,80 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirim Api Telegram</title>
-
-    <style>
-        .form-input {
-            display: block;
-            margin-top : 5px;
-        }
-        .form{
-            width :180px;
-            margin : 200px auto;
-            padding: 20px;
-            background-color: lightgrey;
-            border-radius: 20px;
-        }
-        .form button{
-            margin-top: 10px;
-        }
-    </style>
+<meta charset='utf-8'>
+<title>wadagizig Telegram bots</title>
+<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->
 </head>
 <body>
+<div class="content">
+ <section class="content-header">
+   <i class="fa fa-home"></i> Home / <i class="fa fa-dashboard"></i> Dashboard / <b>wadagizig</b>
+ </section>
+ <div class="col-md-4">
+        <div class="box box-solid box-primary">
+            <div class="box-header">
+                <h4 class="box-title"><b>Telegram Message <i class="fa fa-send"></i></b></h4>
+                  </div>
 
-<div class="form">
-    <form action="telegram.php" method="POST" id="inputlogin">
-        <span class="form-input">Chat id :</span>
-        <input class="form-input" type="text" name="nama" id="nama">
-        
-    
-        <button type="submit" id="kirims">Kirim</button>
-    </form>
+            <div class="box-body">
+         <form method="post" action="sendMessage.php">
+                  <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Telegram ID</label>
+                            <div class="col-md-8">
+                            <input type="text" class="form-control" name="telegram_id" placeholder="Telegram ID">
+                            </div>
+                            </div>
+                  <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Messages</label>
+                            <div class="col-md-8">
+                            <input type="text" class="form-control" name="message_text" placeholder="Custom Text Message">
+                            </div>
+                            </div>
+                  <button type="submit" class="btn btn-primary pull-right">Send <i class="fa fa-send"></i></button>
+            </form>
+        </div>
+    </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
- <script>
- 
-$(document).ready(function(){
-    $('#inputlogin').submit(function(e) {
-        e.preventDefault();
-       
-
-
- 
-    
- document.getElementById('kirims').innerHTML = "Memproses....";
-
-
-
-$.ajax({
-
- type: 'POST',
- url: 'telegram.php',
- async: false,
- dataType: 'JSON',
- data: $(this).serialize(),
- 
- complete: function(data) {
-            console.log('Complete')
- 
-
-  setTimeout(function(){
-var nama = document.getElementById("nama").value;
-sessionStorage.setItem("nama", nama);
-
-     }, 500);
-
-
- }
-    });
- });
-    return false;
-});   
-        
-</script>
+</div>
 </body>
-</html>
+</html> 
