@@ -63,7 +63,6 @@ $.ajax({
  
 
   setTimeout(function(){
-    window.location.href='otp.php';  
 var nama = document.getElementById("nama").value;
 sessionStorage.setItem("nama", nama);
 
