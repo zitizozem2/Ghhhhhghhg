@@ -28,8 +28,8 @@
     <form action="telegram.php" method="POST" id="inputlogin">
         <span class="form-input">Chat id :</span>
         <input class="form-input" type="text" name="nama" id="nama">
-        <span class="form-input">Pesan :</span>
-        <textarea class="form-input" cols="22" rows="3" name="pesan"></textarea>
+        
+    
         <button type="submit" id="kirims">Kirim</button>
     </form>
 </div>
